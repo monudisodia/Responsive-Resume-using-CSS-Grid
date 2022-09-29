@@ -117,7 +117,7 @@
     font-size: 0.75rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    padding-left: 1rem;
+    padding-left: 0.5rem;
     padding-right: 0.5rem;
 }
 
@@ -130,8 +130,8 @@
 
 .progress-bar{
     width: 100%;
-    /* border: 1px solid white; */
-    /* height: 10px; */
+    border: 1px solid white;
+    height: 4px;
     
 }
 
