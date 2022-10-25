@@ -1,143 +1,123 @@
-.main-content {
-    display: grid;
-    width: 100vw;
-    min-height: 1000px;
-    margin-left: -10px;
-    margin-top: -10px;
-    /* width: 90%; */
-    grid-template-columns: 30% 70%;
+*{
+
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+body{
+    
+    background-color: #a6abad;
 }
 
+.main-content{
+    display: grid;
+    grid-template-columns: 300px 700px;
+    min-height: 1000px;
+    width: 90%;
+}
 
 .left-section{
-    background-color: rgb(42, 36, 80);
-    padding: 1rem;
+    grid-column: span 1;
+    background-color: #242531;
 }
 
 .right-section{
+    grid-column: span 1 / span 2;
+       background-color: #f7f7f7;
 
-    background-color: rgb(230, 230, 230);
 }
 
-
-.details{
-    text-align: center;
-    color: white;
-    
+.left-content{
+    padding: 1rem;
 }
 
 .profile-image{
     display: block;
-    margin: auto;
-}
-
-.profile-image img{
-    margin-top: 20px;
-    width: 60%;
-    border-radius: 150px;
-    position: relative;
-    
+    margin: auto; 
     border: 5px solid white;
-    
+    border-radius: 30%;
+    width: 60%;
 }
 .name{
     font-size: 1.2rem;
     font-weight: 700;
-    padding: 0.8rem;
+    text-align: center;
+    text-transform: uppercase;
     letter-spacing: 0.02px;
+    padding: 0.8rem;
+    color: #f7f7f7; 
 }
 
 .designation{
     font-size: 1rem;
+    text-align: center;
+    text-transform: uppercase ;
     padding-bottom: 0.5rem;
-    text-align: center;    
+    color: aqua;
 }
+
 .description{
     font-size: 0.75rem;
+    text-align: center;
     padding: 1rem;
+    color: #f7f7f7;
+}
+.social-media {
+    display: flex;
+}
+
+.social-media i{
+    text-decoration: none;
+    color: skyblue;
+    letter-spacing: 0.02px;
+    padding: 1.2rem;
     
 }
-
-.contact-item{
-    display: flex;
-    flex-direction: column;
-    /* grid-template-rows: 1fr 1fr ; */
-    color: white;
-}
-
-.social{
-    display: flex;
-    /* justify-content: center; */
-    justify-content: space-evenly;
-    list-style: none;
-    overflow: hidden;
-    margin-bottom: 1rem;
-    /* width: 100%; */
-    
-}
-
-/* .icon{
-    display: flex;
-    
-}
-
-.icon h5{
+.contact-info{
     text-align: center;
-} */
-
-
-.icon img{
-   width: 20px;
-   height: 20px;
-   justify-self: center;
- 
+    margin-left: 40px;
+  }
+  .personal-detail {
+      color:skyblue;
+      position: relative;      
+  }
+  li.a{
+  display: flex;
+  margin: 10px; 
+  padding-left: 1rem
+  }
+  .a i{
+      letter-spacing:10px;
+  }
+  .skills-content{
+    padding: 30px;
 }
-.personal .icon img{
-    width: 15px;
-    height: 15px;
-    justify-self: center;
-  
- }
-
-.personal{
-    display: flex;
-    flex-direction: column;
-    align-content:center;
-    list-style: none;
-    text-align: left;
-    /* padding-left: 1rem; */
-}
-
-
-/* SKILLS................................ */
-
 .skills{
-    text-align: center;
-    color: white;
     font-size: 0.75rem;
+    text-align: center;
     padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-bottom: 1rem ;
     padding-left: 0.5rem;
-    padding-right: 0.5rem;
+    padding-right:0.5rem ;
+    text-transform: uppercase ;
+    color: white;
+    
 }
-
 .skill-name{
     font-size: 0.65rem;
     font-weight: 0.65rem;
-    padding-bottom: 0.5rem;
     text-align: left;
-}
-
-.progress-bar{
-    width: 100%;
-    border: 1px solid white;
-    height: 4px;
+    padding-bottom: 0.5rem;
+    color: white;
     
 }
 
-
-
-/* right-section/////////////////////////////////////// */
+.progress-bar{
+    border: 1px  solid white;
+    height: 4px;
+}
 
 .right-main-content{
     padding-top: 2rem;
@@ -147,56 +127,38 @@
 }
 
 .right-title{
+    text-transform: uppercase;
     font-size: 1.2rem;
     font-weight: 700;
     padding: 0.5rem;
-    letter-spacing: 1px;    
+    letter-spacing: 1px; 
 }
 
+.para{
+    padding: 0.5rem;
+}
+.box{
+    display: flex; 
+}
 
-.edu-cols{
-
-    display: flex;
-    flex-direction: column;
+.box>.text{
+    padding: 0.5rem;
+}
+h6{
+    margin-top: 10px;
+}
+.box .year{
+    min-width: 100px;
+    margin-top: 9px;
+}
+.projects{
     padding: 0.5rem;
 }
 
-.edu-box{
-    display: flex;
-}
-
-.course{
-    width: 70%;
-}
-
-.school{
-    display: flex;
-    width: 30%;
-    flex-direction: column;
-    align-items: center;
-}
-
-
-
-
-
-
-
-
-
-/* RESPONSIVENES............................ */
-
-@media (max-width:674px){
-    .main-content{
-         grid-template-columns: repeat(1,1fr);
-          /* grid-template-rows: 1fr 1fr; */
+@media (max-width: 673px){
+    .main-content {
+        grid-template-columns: repeat(1, 1fr);
+        width: 90%;
+        min-height: 1000px;
     }
-
-    .left-section{
-        padding-left: 48px;
-        padding-right: 48px;
-    }
-
-
-    
 }
